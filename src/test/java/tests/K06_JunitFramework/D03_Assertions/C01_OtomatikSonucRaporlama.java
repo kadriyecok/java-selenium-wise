@@ -1,6 +1,6 @@
-package tests.K06_JunitFramework.D02_Annotations;
+package tests.K06_JunitFramework.D03_Assertions;
 
-
+import junit.framework.AssertionFailedError;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -14,15 +14,15 @@ import utilities.ReusableMethods;
 import java.time.Duration;
 import java.util.List;
 
-public class C04_BeforeAll_AfterAll {
+public class C01_OtomatikSonucRaporlama {
 
     // 3 farkli test methodu olusturarak asagidaki testleri gerceklestirin
-    //1- test otomasyonu anasayfaya gidin
-    //   url'in test otomasyonu icerdigini test edin
-    //2- phone icin arama yapin
-    //   ve arama sonucunda urun bulunabildigini test edin
-    //3- ilk urunu tiklayin
-    //   ve acilan sayfadaki urun isminde case sensitive olmadan "phone" bulundugunu test edin
+    // 1- Test Otomasyonu anasayfasina gidin
+    //     Url'in testotomasyonu icerdigini test edin
+    // 2- phone icin arama yapin
+    //     ve arama sonucunda urun bulunabildigini test edin
+    // 3- ilk urunu tiklayin
+    //     ve acilan sayfadaki urun isminde case sensitive olmadan "phone" bulundugunu test edin
 
     static WebDriver driver;
 
@@ -51,7 +51,10 @@ public class C04_BeforeAll_AfterAll {
 
         if (actualUrlIcerik.contains(expectedUrlIcerik)){
             System.out.println("Url test PASSED");
-        } else System.out.println("Url testi FAILED");
+        } else {
+            System.out.println("Url testi FAILED");
+            throw new AssertionFailedError();
+        }
 
         ReusableMethods.bekle(1);
 
@@ -72,7 +75,10 @@ public class C04_BeforeAll_AfterAll {
 
         if (actualSonucSayisi > 0){
             System.out.println("phone arama testi PASSED");
-        }else System.out.println("phone arama testi FAILED");
+        }else {
+            System.out.println("phone arama testi FAILED");
+            throw new AssertionFailedError();
+        }
 
         ReusableMethods.bekle(1);
 
@@ -89,10 +95,14 @@ public class C04_BeforeAll_AfterAll {
 
         String expectedIsimIcerik = "phone";
         String actualIsim = ilkUrunIsimElementi.getText()
-                            .toLowerCase(); // case sensitive (buyuk-kucuk harf) olmamasi icin
+                .toLowerCase(); // case sensitive (buyuk-kucuk harf) olmamasi icin
 
         if (actualIsim.contains(expectedIsimIcerik)){
             System.out.println("Urun isim testi PASSED");
-        }else System.out.println("Urun isim testi FAILED");
+        }else{
+            System.out.println("Urun isim testi FAILED");
+            throw new AssertionFailedError();
+        }
     }
+
 }
