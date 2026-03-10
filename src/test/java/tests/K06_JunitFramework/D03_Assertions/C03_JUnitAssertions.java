@@ -3,6 +3,7 @@ package tests.K06_JunitFramework.D03_Assertions;
 import junit.framework.AssertionFailedError;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -14,7 +15,8 @@ import utilities.ReusableMethods;
 import java.time.Duration;
 import java.util.List;
 
-public class C01_OtomatikSonucRaporlama {
+public class C03_JUnitAssertions {
+
 
     // 3 farkli test methodu olusturarak asagidaki testleri gerceklestirin
     // 1- Test Otomasyonu anasayfasina gidin
@@ -49,14 +51,16 @@ public class C01_OtomatikSonucRaporlama {
         String expectedUrlIcerik = "testotomasyonu";
         String actualUrlIcerik = driver.getCurrentUrl();
 
-        if (actualUrlIcerik.contains(expectedUrlIcerik)){
-            System.out.println("Url test PASSED");
-        } else {
-            System.out.println("Url testi FAILED");
-            throw new AssertionFailedError();
-        }
+        Assertions.assertTrue(actualUrlIcerik.contains(expectedUrlIcerik),"url expected kelimesini icermiyor");
 
-       // ReusableMethods.bekle(1);
+      //  if (actualUrlIcerik.contains(expectedUrlIcerik)){
+      //      System.out.println("Url test PASSED");
+      //  } else {
+      //      System.out.println("Url testi FAILED");
+      //      throw new AssertionFailedError();
+      //  }
+
+        // ReusableMethods.bekle(1);
 
     }
 
@@ -73,13 +77,15 @@ public class C01_OtomatikSonucRaporlama {
 
         int actualSonucSayisi = bulunanUrunElementleriList.size();
 
-        if (actualSonucSayisi > 0){
-            System.out.println("phone arama testi PASSED");
-        }else {
-            System.out.println("phone arama testi FAILED");
-            throw new AssertionFailedError();
-        }
+        Assertions.assertTrue(actualSonucSayisi>0);
 
+      //  if (actualSonucSayisi > 0){
+      //      System.out.println("phone arama testi PASSED");
+      //  }else {
+      //      System.out.println("phone arama testi FAILED");
+      //      throw new AssertionFailedError();
+      //  }
+//
         ReusableMethods.bekle(1);
 
     }
@@ -97,12 +103,14 @@ public class C01_OtomatikSonucRaporlama {
         String actualIsim = ilkUrunIsimElementi.getText()
                 .toLowerCase(); // case sensitive (buyuk-kucuk harf) olmamasi icin
 
-        if (actualIsim.contains(expectedIsimIcerik)){
-            System.out.println("Urun isim testi PASSED");
-        }else{
-            System.out.println("Urun isim testi FAILED");
-            throw new AssertionFailedError();
-        }
+        Assertions.assertTrue(actualIsim.contains(expectedIsimIcerik));
+
+    //   if (actualIsim.contains(expectedIsimIcerik)){
+    //       System.out.println("Urun isim testi PASSED");
+    //   }else{
+    //       System.out.println("Urun isim testi FAILED");
+    //       throw new AssertionFailedError();
+    //   }
     }
 
 }
