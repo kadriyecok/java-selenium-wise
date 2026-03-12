@@ -1,7 +1,7 @@
 package tests.K06_JunitFramework.D03_Assertions;
 
-import junit.framework.AssertionFailedError;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;

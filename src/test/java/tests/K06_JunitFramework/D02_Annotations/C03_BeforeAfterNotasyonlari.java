@@ -1,8 +1,9 @@
 package tests.K06_JunitFramework.D02_Annotations;
 
-import org.junit.Test;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import utilities.ReusableMethods;

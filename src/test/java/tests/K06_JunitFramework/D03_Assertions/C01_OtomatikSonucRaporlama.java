@@ -1,7 +1,7 @@
 package tests.K06_JunitFramework.D03_Assertions;
 
-import junit.framework.AssertionFailedError;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.By;
@@ -9,6 +9,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.opentest4j.AssertionFailedError;
 import utilities.ReusableMethods;
 
 import java.time.Duration;

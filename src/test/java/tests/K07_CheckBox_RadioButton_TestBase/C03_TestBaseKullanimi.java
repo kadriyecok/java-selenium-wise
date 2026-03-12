@@ -1,6 +1,6 @@
 package tests.K07_CheckBox_RadioButton_TestBase;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import utilities.ReusableMethods;
 import utilities.TestBase_Each;
 

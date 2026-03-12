@@ -1,6 +1,6 @@
 package tests.K06_JunitFramework.D03_Assertions;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
 public class C02_AssertionsMethodlari {
