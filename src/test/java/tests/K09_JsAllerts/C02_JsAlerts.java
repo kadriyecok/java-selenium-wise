@@ -44,11 +44,13 @@ public class C02_JsAlerts extends TestBase_Each {
 
         // - https://testotomasyonu.com/javascriptAlert adresine gidin
         driver.get("https://testotomasyonu.com/javascriptAlert");
+        ReusableMethods.bekle(2);
 
 
         // - 2.Alert'e tiklayin
         driver.findElement(By.xpath("//*[@onclick = 'jsConfirm()']"))
                 .click();
+        ReusableMethods.bekle(2);
 
         // - Cancel'a basip,
         driver.switchTo().alert().dismiss();
