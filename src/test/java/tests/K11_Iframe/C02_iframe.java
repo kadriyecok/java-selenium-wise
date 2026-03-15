@@ -49,14 +49,14 @@ public class C02_iframe extends TestBase_Each {
         driver.switchTo().frame(fashionIframe);
 
         // simdi ilk urunu locate edebiliriz
-        WebElement ilkUrunısimElementi = driver.findElement(By.xpath("(//p)[1]"));
+        WebElement ilkUrunIsimElementi = driver.findElement(By.xpath("(//p)[1]"));
 
         // ve ilk urun isminde "Men Slim Fit" gecitigini test edin
 
-        String expectedısimIcerigi = "Men Slim Fit";
-        String actualIsimIcerigi = ilkUrunısimElementi.getText();
+        String expectedIsimIcerigi = "Men Slim Fit";
+        String actualIsimIcerigi = ilkUrunIsimElementi.getText();
 
-        Assertions.assertTrue(actualIsimIcerigi.contains(expectedısimIcerigi));
+        Assertions.assertTrue(actualIsimIcerigi.contains(expectedIsimIcerigi));
 
 
 
