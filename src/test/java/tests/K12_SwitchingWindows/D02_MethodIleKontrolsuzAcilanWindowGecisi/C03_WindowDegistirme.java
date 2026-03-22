@@ -3,6 +3,7 @@ package tests.K12_SwitchingWindows.D02_MethodIleKontrolsuzAcilanWindowGecisi;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import utilities.ReusableMethods;
 import utilities.TestBase_Each;
@@ -59,4 +60,5 @@ public class C03_WindowDegistirme extends TestBase_Each {
         ReusableMethods.bekle(1);
 
     }
+
 }
