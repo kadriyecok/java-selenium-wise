@@ -1,4 +1,4 @@
-package tests.K13_actionsClass;
+package tests.K13_actionsClass.D01_mouseBaseAction;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
